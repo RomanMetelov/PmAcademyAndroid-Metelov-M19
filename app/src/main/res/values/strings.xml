@@ -6,4 +6,7 @@
     <string name="container_transition">container_transition</string>
     <string name="the_logo">The Logo</string>
     <string name="button_back">Back</string>
+    <string name="won">WON</string>
+    <string name="drawn">DRAWN</string>
+    <string name="lost">LOST</string>
 </resources>

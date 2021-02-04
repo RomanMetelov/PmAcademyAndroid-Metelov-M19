@@ -12,6 +12,7 @@
         android:layout_height="0dp"
         android:layout_margin="4dp"
         android:contentDescription="@string/the_logo"
+        android:paddingTop="16dp"
         android:transitionName="@string/team_logo_transition"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toBottomOf="@+id/tvFootballTeamName"
@@ -51,30 +52,30 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="4dp"
             android:layout_weight="1"
+            android:text="@string/won"
             android:textAlignment="center"
             android:textColor="@color/win"
-            android:textSize="20sp"
-            tools:text="WON" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="4dp"
             android:layout_weight="1"
+            android:text="@string/drawn"
             android:textAlignment="center"
             android:textColor="@color/draw"
-            android:textSize="20sp"
-            tools:text="DRAWN" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="4dp"
             android:layout_weight="1"
+            android:text="@string/lost"
             android:textAlignment="center"
             android:textColor="@color/loss"
-            android:textSize="20sp"
-            tools:text="LOST" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout

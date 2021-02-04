@@ -17,11 +17,10 @@ import com.example.pmacademyandroid_metelov_m19.databinding.RecyclerViewEplItemB
 
 class RecyclerViewEPLAdapter(private val items: List<FootballTeam>) :
     RecyclerView.Adapter<RecyclerViewEPLAdapter.FootballTeamViewHolder>() {
-    private lateinit var binding: ActivityRecyclerViewEplBinding
 
-    inner class FootballTeamViewHolder(private val binding: RecyclerViewEplItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class FootballTeamViewHolder(private val binding: RecyclerViewEplItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(footballTeam: FootballTeam) {
-
             binding.tvItemId.text = footballTeam.id.toString()
             Glide.with(binding.root.context)
                 .load(footballTeam.logo)
@@ -29,16 +28,28 @@ class RecyclerViewEPLAdapter(private val items: List<FootballTeam>) :
                 .into(binding.ivFootballTeamLogo)
             binding.tvFootballTeamName.text = footballTeam.name
             binding.tvfootballTeamScore.text = footballTeam.score.toString()
+            binding.root.setOnClickListener {
+                FootballTeamProfileActivity.start(
+                    binding.root.context,
+                    binding.ivFootballTeamLogo,
+                    binding.tvFootballTeamName,
+                    footballTeam
+                )
+            }
         }
     }
 
-    override fun onBindViewHolder(holder: RecyclerViewEPLAdapter.FootballTeamViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RecyclerViewEPLAdapter.FootballTeamViewHolder,
+        position: Int
+    ) {
         val footballTeam = items[position]
         holder.bind(footballTeam)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FootballTeamViewHolder {
-        val binding = RecyclerViewEplItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            RecyclerViewEplItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FootballTeamViewHolder(binding)
     }
 
