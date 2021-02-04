@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <TextView
+        android:id="@+id/tvItemId"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/ivFootballTeamLogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/the_logo" />
+
+    <TextView
+        android:id="@+id/tvFootballTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        tools:text="DefaultName" />
+
+    <TextView
+        android:id="@+id/tvfootballTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_weight="3"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        tools:text="42pts" />
+
+</LinearLayout>

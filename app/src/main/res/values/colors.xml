@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="win">#056305</color>
+    <color name="draw">#FF444444</color>
+    <color name="loss">#FFFF0000</color>
 </resources>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PmAcademyAndroid-Metelov-M19</string>
+
+    <string name="team_logo_transition">icon_transition</string>
+    <string name="team_name_transition">name_transition</string>
+    <string name="container_transition">container_transition</string>
+    <string name="the_logo">The Logo</string>
+    <string name="button_back">Back</string>
 </resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FootballTeamProfileActivity">
+
+    <ImageView
+        android:id="@+id/ivFootballTeamLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/the_logo"
+        android:transitionName="@string/team_logo_transition"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/tvFootballTeamName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFootballTeamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        android:transitionName="@string/team_name_transition"
+        app:layout_constraintBottom_toTopOf="@id/footballTeamStatsHeader"
+        app:layout_constraintTop_toBottomOf="@id/ivFootballTeamLogo"
+        tools:text="DefaultName" />
+
+    <LinearLayout
+        android:id="@+id/footballTeamStatsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFootballTeamName">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/win"
+            android:textSize="20sp"
+            tools:text="WON" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/draw"
+            android:textSize="20sp"
+            tools:text="DRAWN" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/loss"
+            android:textSize="20sp"
+            tools:text="LOST" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footballTeamStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/footballTeamStatsHeader">
+
+        <TextView
+            android:id="@+id/tvWinFootballTeamStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/win"
+            android:textSize="20sp"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tvDrawFootballTeamStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/draw"
+            android:textSize="20sp"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tvLossFootballTeamStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/loss"
+            android:textSize="20sp"
+            tools:text="0" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
